@@ -2,6 +2,14 @@
 eval $(minikube docker-env)
 
 ### build and package
+cd api-alpha-service
+mvn clean install
+cd ..
+
+cd api-beta-service
+mvn clean install
+cd ..
+
 cd alpha-microservice
 mvn clean install
 cd ..
@@ -15,6 +23,9 @@ cd alpha-microservice
 mvn clean install
 mvn package
 cd ..
+
+### service account
+kubectl create clusterrolebinding admin --clusterrole=cluster-admin --serviceaccount=default:default
 
 ### alpha-service
 kubectl delete configmap alpha-service
@@ -32,9 +43,8 @@ kubectl create -f beta-microservice/beta-service/beta-service-deployment.yml
 kubectl delete -f nifi-deployment.yml
 kubectl create -f nifi-deployment.yml
 
-### Configs
-# kubectl create -f client-service/client-config.yaml
-# kubectl create -f client-service/client-service-deployment.yaml
- 
+### ingress
+kubectl apply -f ingress.yml
+
 # Check that the pods are running
 kubectl get pods
