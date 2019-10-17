@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: beta-service
+
+server:
+  port: 9192

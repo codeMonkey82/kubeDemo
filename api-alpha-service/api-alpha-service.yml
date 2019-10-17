@@ -1,0 +1,45 @@
+swagger: "2.0"
+info:
+  description: "Simple example of a swagger file for hello world api"
+  version: "1.0.0"
+  title: "API Alpha Service"
+host: "alpha-service"
+basePath: "/v2"
+schemes:
+  - "http"
+paths:
+  /alpha/status/alpha:
+    get:
+      summary: "Get service status"
+      description: "Simple get request to retrieve service status"
+      operationId: "getStatusAlpha"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/statusAlpha"
+        400:
+          description: "Invalid status value"
+  /alpha/status/beta:
+    get:
+      summary: "Get service status"
+      description: "Simple get request to retrieve beta service status"
+      operationId: "getStatusBeta"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "./definitions/statusBeta.yml"
+        400:
+          description: "Invalid status value"
+
+definitions:
+  statusAlpha:
+    type: "object"
+    properties:
+      result:
+        type: "string"

@@ -1,0 +1,33 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: beta-service
+spec:
+  selector:
+    app: beta-service
+  ports:
+    - protocol: TCP
+      port: 9192
+      nodePort: 30084
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: beta-service
+spec:
+  selector:
+    matchLabels:
+      app: beta-service
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: beta-service
+    spec:
+      containers:
+        - name: beta-service
+          image: springio/beta-service:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 9192

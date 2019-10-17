@@ -1,0 +1,14 @@
+version: '3'
+services:
+  alpha-service:
+    image: "springio/alpha-service"
+    ports:
+      - "9191:9191"
+  beta-service:
+    image: "springio/beta-service"
+    ports:
+      - "9192:9192"
+  nifi:
+    image: "apache/nifi"
+    ports:
+      - "8080:8080"
