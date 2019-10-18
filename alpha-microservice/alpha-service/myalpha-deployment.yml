@@ -1,33 +1,33 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: beta-service
+  name: myalpha
 spec:
   selector:
-    app: beta-service
+    app: myalpha
   ports:
     - protocol: TCP
-      port: 9192
-      nodePort: 30084
+      port: 8081
+      nodePort: 30083
   type: NodePort
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: beta-service
+  name: myalpha
 spec:
   selector:
     matchLabels:
-      app: beta-service
+      app: myalpha
   replicas: 1
   template:
     metadata:
       labels:
-        app: beta-service
+        app: myalpha
     spec:
       containers:
-        - name: beta-service
-          image: springio/beta-service:latest
+        - name: myalpha
+          image: springio/myalpha:latest
           imagePullPolicy: Never
           ports:
-            - containerPort: 9192
+            - containerPort: 8081

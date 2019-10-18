@@ -1,11 +1,11 @@
 kind: ConfigMap
 apiVersion: v1
 metadata:
-  name: alpha-service
+  name: myalpha
 data:
   application.yml: |-
     spring:
       application:
-        name: alpha-service
+        name: myalpha
     server:
-      port: 9191
+      port: 8081

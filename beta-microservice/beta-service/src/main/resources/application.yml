@@ -1,6 +1,6 @@
 spring:
   application:
-    name: beta-service
+    name: mybeta
 
 server:
-  port: 9192
+  port: 8082

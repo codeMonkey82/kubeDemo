@@ -10,15 +10,15 @@ spec:
   - host: microservices.info
     http:
       paths:
-      - path: /alpha-service
-        backend:
-          serviceName: alpha-service
-          servicePort: 9191
-      - path: /beta-service
-        backend:
-          serviceName: beta-service
-          servicePort: 9192
-      - path: /nifi
-        backend:
-          serviceName: nifi
-          servicePort: 8080
+        - path: /nifi
+          backend:
+            serviceName: nifi
+            servicePort: 8080
+        - path: /alpha
+          backend:
+            serviceName: myalpha
+            servicePort: 8081
+        - path: /beta
+          backend:
+            serviceName: mybeta
+            servicePort: 8082

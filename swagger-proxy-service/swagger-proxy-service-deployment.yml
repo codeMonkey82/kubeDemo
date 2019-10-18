@@ -1,0 +1,33 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: swagger-proxy-service
+spec:
+  selector:
+    app: swagger-proxy-service
+  ports:
+    - protocol: TCP
+      port: 8083
+      nodePort: 30087
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: swagger-proxy-service
+spec:
+  selector:
+    matchLabels:
+      app: swagger-proxy-service
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: swagger-proxy-service
+    spec:
+      containers:
+        - name: swagger-proxy-service
+          image: springio/swagger-proxy-service:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8083
