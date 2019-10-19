@@ -22,7 +22,7 @@ What is in the project...
 
 Open a terminal to the root of the repository and run the following command...
 
-sh deployment-demo.sh
+* sh deployment-demo.sh
 
 This will deal with building the API, services, packaging and deploying into Minikube
 
@@ -30,15 +30,28 @@ This will deal with building the API, services, packaging and deploying into Min
 
 Open a web browser to...
 
-http://microservices.info/nifi
+* http://microservices.info/nifi
 
 Setup processors to drive the service endpoints
 
-### Endpoints
+### Direct Get Endpoints
 
-http://alpha-service:9191/alpha/status/alpha
-http://alpha-service:9191/alpha/status/beta
-http://alpha-service:9192/beta/status/alpha
-http://alpha-service:9192/beta/status/beta
+* http://alpha-service:9191/alpha/status/alpha
+* http://alpha-service:9191/alpha/status/beta
+* http://alpha-service:9192/beta/status/alpha
+* http://alpha-service:9192/beta/status/beta
 
+#### via NGINX Ingress
 
+* http://microservices.info/alpha/status/alpha
+* http://microservices.info/alpha/status/beta
+* http://microservices.info/beta/status/alpha
+* http://microservices.info/beta/status/beta
+
+### Swagger API
+
+In order to access API documentation after running up the cluster it is possible to query and exercise the service API via swagger ui.
+
+Access the central swagger API documentation on the following address...
+
+* http://microservices.info:30087/swagger-ui.html

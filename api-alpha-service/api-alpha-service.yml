@@ -20,8 +20,74 @@ paths:
           description: "successful operation"
           schema:
             $ref: "#/definitions/statusAlpha"
-        400:
+        404:
+          description: "Not Found"
+          schema:
+            $ref: "#/definitions/defaultFourZeroFour"
+    post:
+      summary: "Posts a new status to the service"
+      operationId: "createStatusAlpha"
+      consumes:
+        - "application/json"
+      parameters:
+        - in: body
+          name: inStatusAlphaSchema
+          schema:
+            $ref: "#/definitions/statusAlphaSchema"
+      produces:
+        - "application/json"
+      responses:
+        201:
+          description: 'creation complete'
+          schema:
+            $ref: "#/definitions/statusAlpha"
+        404:
           description: "Invalid status value"
+          schema:
+            $ref: "#/definitions/defaultFourZeroFour"
+  /alpha/status/alpha/{statusId}:
+    put:
+      summary: "Posts a new status to the service"
+      operationId: "updateStatusAlpha"
+      consumes:
+        - "application/json"
+      parameters:
+        - in: path
+          name: statusId
+          type: integer
+        - in: body
+          name: inStatusAlphaSchema
+          schema:
+            $ref: "#/definitions/statusAlphaSchema"
+      produces:
+        - "application/json"
+      responses:
+        201:
+          description: 'creation complete'
+          schema:
+            $ref: "#/definitions/statusAlpha"
+        200:
+          description: 'update complete'
+          schema:
+            $ref: "#/definitions/statusAlpha"
+        404:
+          description: "Invalid status value"
+          schema:
+            $ref: "#/definitions/defaultFourZeroFour"
+    delete:
+      summary: "Example of a delete request to the service"
+      operationId: "deleteStatusAlpha"
+      parameters:
+        - in: path
+          name: statusId
+          type: integer
+          required: true
+          description: "Numeric ID of the status to delete"
+      responses:
+        200:
+          description: 'Delete complete'
+        404:
+          description: "id not found"
           schema:
             $ref: "#/definitions/defaultFourZeroFour"
   /alpha/status/beta:
@@ -67,4 +133,11 @@ definitions:
     type: "object"
     properties:
       result:
+        type: "string"
+  statusAlphaSchema:
+    type: "object"
+    required:
+      - inStatusValue
+    properties:
+      inStatusValue:
         type: "string"

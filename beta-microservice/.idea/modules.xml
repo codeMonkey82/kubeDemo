@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/beta-microservice.iml" filepath="$PROJECT_DIR$/beta-microservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/beta-service-interface/beta-service-interface.iml" filepath="$PROJECT_DIR$/beta-service-interface/beta-service-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/beta-service/mybeta.iml" filepath="$PROJECT_DIR$/beta-service/mybeta.iml" />
+    </modules>
+  </component>
+</project>

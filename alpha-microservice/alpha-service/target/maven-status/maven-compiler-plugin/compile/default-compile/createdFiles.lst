@@ -1,0 +1,5 @@
+com/demo/services/Application.class
+com/demo/services/configuration/Config.class
+com/demo/services/controller/AlphaController.class
+com/demo/services/manager/BetaManager.class
+com/demo/services/manager/AlphaManager.class
