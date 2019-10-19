@@ -1,6 +1,0 @@
-spring:
-  application:
-    name: mybeta
-
-server:
-  port: 8082
