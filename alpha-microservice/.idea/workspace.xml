@@ -2,14 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae600944-b767-495a-9733-9d53f59123a1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alpha-microservice.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alpha-service-interface/alpha-service-interface.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alpha-service/src/main/java/com/demo/services/controller/AlphaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alpha-service/src/main/java/com/demo/services/controller/AlphaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-alpha-service/api-alpha-service.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-alpha-service/api-alpha-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../api-alpha-service/api-alpha-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../beta-microservice/beta-microservice.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../beta-microservice/beta-service-interface/beta-service-interface.iml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api-alpha-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api-beta-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../beta-microservice/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-beta-service/api-beta-service.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beta-microservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../beta-microservice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swagbag-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swagbag-service/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swagbag-service/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swagbag-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swagbag-service/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swagbag-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swagbag-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swagbag-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swagbag-service/src/main/java/com/demo/services/swagbagservice/SwagbagServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swagbag-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swagbag-service/src/test/java/com/demo/services/swagbagservice/SwagbagServiceApplicationTests.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +65,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
